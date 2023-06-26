@@ -29,7 +29,7 @@ function App() {
       {!loading && result && (
         <PostBattleScreen
           winningTeam={result.winningTeam}
-          losingTeam={result.losingTeam}
+          loserTeam={result.loserTeam}
         />
       )}
     </div>

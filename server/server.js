@@ -15,7 +15,7 @@ const winningTeam = {
   })),
 };
 
-const losingTeam = {
+const loserTeam = {
   players: Array.from({ length: 50 }, (_, index) => ({
     nickname: `Player ${index + 51}`,
     scores: Math.floor(Math.random() * 100),
@@ -28,7 +28,7 @@ const losingTeam = {
 const friendRequests = [];
 
 app.get("/api/battle/result", (req, res) => {
-  res.json({ winningTeam, losingTeam });
+  res.json({ winningTeam, loserTeam });
 });
 
 app.post("/api/players/friend-requests", (req, res) => {
@@ -39,7 +39,7 @@ app.post("/api/players/friend-requests", (req, res) => {
 
     const isPlayerExists =
       winningTeam.players.some((item) => item.id === player.id) ||
-      losingTeam.players.some((item) => item.id === player.id);
+      loserTeam.players.some((item) => item.id === player.id);
 
     if (!isPlayerExists) {
       res.status(404).send("Player not found");

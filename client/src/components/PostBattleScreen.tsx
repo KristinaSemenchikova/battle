@@ -4,12 +4,12 @@ import { Team } from "../types";
 
 type PostBattleScreenProps = {
   winningTeam: Team;
-  losingTeam: Team;
+  loserTeam: Team;
 };
 
 const PostBattleScreen: React.FC<PostBattleScreenProps> = ({
   winningTeam,
-  losingTeam,
+  loserTeam,
 }) => {
   return (
     <div className="post-battle-container">
@@ -22,8 +22,8 @@ const PostBattleScreen: React.FC<PostBattleScreenProps> = ({
           ))}
         </div>
         <div className="team">
-          <h2>Losing Team</h2>
-          {losingTeam.players.map((player, index) => (
+          <h2>Loser Team</h2>
+          {loserTeam.players.map((player, index) => (
             <Player key={index} player={player} />
           ))}
         </div>

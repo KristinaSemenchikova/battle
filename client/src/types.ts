@@ -12,5 +12,5 @@ export type Team = {
 
 export type Result = {
   winningTeam: Team,
-  losingTeam: Team;
+  loserTeam: Team;
 };
