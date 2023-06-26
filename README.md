@@ -3,7 +3,7 @@
 In order to run app you have to do following steps
 
 
-## Installing dependecies and running the app
+## Installing dependencies and running the app
 
 Client:
 
